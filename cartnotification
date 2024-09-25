@@ -1,0 +1,19 @@
+                <?php  
+                      $connect = mysqli_connect("localhost", "root", "", "rmart");
+                      
+                      $rand_num=rand(1,4);   //-------------------------------------------------------------------------------------------------------------------print rand number
+                      $s_count=0;
+                      $limit=2;
+                       //---------------------------------------------------------------------------------------------------------session to call variable to next page
+
+
+                   
+                      
+//$query = "SELECT T.*, COUNT(C.id) as count FROM tbl_images T, checkout C ORDER BY p_cost desc" ;  
+                      $query = "SELECT * FROM tbl_images ORDER BY p_cost desc" ;  
+                      $result = mysqli_query($connect, $query); 
+
+                     
+
+                      //echo "<table border='2'>";
+                while($row = mysqli_fetch_array($result)) 
